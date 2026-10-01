@@ -12,4 +12,6 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Deployed on Netlify. Lovable's own builds still pin their preset via LOVABLE_NITRO_PRESET.
+  nitro: { preset: "netlify" },
 });

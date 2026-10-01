@@ -1,0 +1,10 @@
+# Netlify build settings. Nitro's netlify preset (see vite.config.ts) writes
+# static files to dist/ and the SSR + server-function handler to
+# .netlify/functions-internal/, which Netlify picks up automatically.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Vite 8 requires Node 20.19+ or 22.12+.
+  NODE_VERSION = "22"
